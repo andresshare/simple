@@ -23,4 +23,4 @@ class Post(models.Model):
     created_at = models.DateField(auto_now_add=True)
     updated_at = models.DateTimeField(null=True)
     created_by = models.ForeignKey(User,related_name='post')
-    update_by = models.ForeignKey(User, null=True, related_name='+')
+    updated_by = models.ForeignKey(User, null=True, related_name='+')

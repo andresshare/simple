@@ -20,6 +20,12 @@ from boards import views
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
+    url(r'^about/$', views.home, name='home'),
+    url(r'^about/company/$', views.about_company, name='about_company'),
+    url(r'^about/author/$', views.about_company, name='about_company'),
+    #url(r'^about/author/ander/$', views.about_ander, name='about_ander'),
+    #url(r'^privacy/$', views.privacy_policy, name='privacy_policy'),
+    #url(r'^(?P<username>[\w.@+-]+)/$', views.user_profile, name='user_profile'),
+    url(r'^boards/(?P<pk>\d+)$', views.board_topics, name='board_topics'),
     url(r'^admin/', admin.site.urls)
-
 ]
