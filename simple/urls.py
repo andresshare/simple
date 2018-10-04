@@ -27,5 +27,6 @@ urlpatterns = [
     #url(r'^privacy/$', views.privacy_policy, name='privacy_policy'),
     #url(r'^(?P<username>[\w.@+-]+)/$', views.user_profile, name='user_profile'),
     url(r'^boards/(?P<pk>\d+)$', views.board_topics, name='board_topics'),
+    #url(r'^boards/(\d+)/$', views.board_topics, name='board_topics'),
     url(r'^admin/', admin.site.urls)
 ]

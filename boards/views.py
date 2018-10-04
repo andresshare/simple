@@ -1,6 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Board
-from django.http import Http404
 
 
 def home(request):
@@ -17,9 +16,9 @@ def about_company(request):
 
 
 def board_topics(request, pk):
-    try:
-        board = Board.objects.get(pk=pk)
-    except Board.DoesNotExist:
-        raise Http404
+    board = get_object_or_404(Board, pk=pk)
     return render(request, 'topics.html', {'board': board})
+
+
+
 
